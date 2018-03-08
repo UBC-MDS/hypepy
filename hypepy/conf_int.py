@@ -9,9 +9,18 @@ def conf_int(data):
 
     import numpy as np
 
-    # Doing some checks on the user input
+    if isinstance(data, bool):
+        raise TypeError("Input cannot be a Boolean")
+
+    if isinstance(data, str):
+        raise TypeError("Input cannot be a string")
+
+    if np.isnan(data).any() == True:
+        raise ValueError("Input cannot contain NA values")
+
     if len(data) == 0:
         raise ValueError("Input cannot be empty")
+
 
     # Set up the parameters
     mean = np.mean(data)

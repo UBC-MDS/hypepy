@@ -39,4 +39,4 @@ def test_math():
     # This array has a mean of 3 and a sd of 1.5811388300842
     data = np.array([1,2,3,4,5])
 
-    assert conf_int(data) == [1.61, 4.38]
+    assert np.array_equal(conf_int(data), np.array([1.61, 4.39]))
