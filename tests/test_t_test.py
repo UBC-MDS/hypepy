@@ -1,7 +1,7 @@
 import pytest
 
 import numpy as np
-from src.hyptest import t_test
+from hypepy import t_test
 
 def test_input():
     """
