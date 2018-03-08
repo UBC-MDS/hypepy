@@ -1,0 +1,5 @@
+# Auxiliary files related to python packages
+*/__pycache__/
+
+# Auxiliary folders related to pytest
+*.pytest_cache/
