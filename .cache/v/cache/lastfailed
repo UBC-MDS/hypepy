@@ -1,0 +1,6 @@
+{
+  "tests/test_hyp_test.py::test_missing_data": true,
+  "tests/test_hyp_test.py::test_non_zero": true,
+  "tests/test_t_test.py::test_data": true,
+  "tests/test_t_test.py::test_math": true
+}
