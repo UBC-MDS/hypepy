@@ -11,7 +11,7 @@ def conf_int(data):
     '''
 
 
-def type_test(conf_int):
+def test_type():
     '''
     This tests whether there are incompatible data types in the input array. This includes the following:
     Strings, booleans, NA values.
@@ -28,7 +28,7 @@ def type_test(conf_int):
         conf_int(NA_test)
 
 
-def length_test(conf_int):
+def test_length():
     '''
     This function tests whether the input data array is empty, and throws a ValueError if it is.
     '''
@@ -39,7 +39,7 @@ def length_test(conf_int):
     with pytest.raises(ValueError):
         conf_int(data_test)
 
-def check_math(conf_int):
+def test_math():
     '''
     This function tests whether the math/output in the conf_int function is correct.
     '''
