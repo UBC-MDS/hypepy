@@ -41,9 +41,10 @@ def test_math():
 
     # Test data and expected output.
     data = np.array([1, 4, 2, 4])
-    tstat_expected = 3.666666666666667
+    tstat_expected = 3.6666666666666661
 
     # Tolerance for equivalent floats
     tol = 1e-14
 
-    assert abs( t_test( data = data ) - tstat_expected) < tol
+    tstat_computed = t_test( data = data )
+    assert abs( tstat_computed - tstat_expected) < tol
