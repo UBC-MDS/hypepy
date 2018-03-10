@@ -27,7 +27,7 @@ def hyp_test(data, mean_0, alpha):
     if len(data) == 0:
         raise ValueError("Data must not be empty.")
 
-    if np.isnan(data) == True:
+    if np.isnan(data).any() == True:
         raise ValueError("Data must not have missing data.")
 
     if 0 <= alpha > 1:

@@ -18,9 +18,8 @@ def test_hyp_test_missing():
     Test if the input contains missing values.
     '''
     data = np.array([0, np.nan, 2])
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         hyp_test(data, mean_0=1, alpha = 0.05)
-        assert data == np.isnan(data)
 
 def test_hyp_test_non_zero():
     '''
