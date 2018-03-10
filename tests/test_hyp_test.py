@@ -3,7 +3,7 @@ import pytest
 from hypepy import hyp_test
 
 
-def test_hyp_test_integer(hyp_test):
+def test_hyp_test_integer():
     '''
     Test if the input data is numeric, not a string or boolean.
     '''
@@ -13,7 +13,7 @@ def test_hyp_test_integer(hyp_test):
     with pytest.raises(TypeError):
         hyp_test(data = True, mean_0=1, alpha=0.05)
 
-def test_hyp_test_missing(hyp_test):
+def test_hyp_test_missing():
     '''
     Test if the input contains missing values.
     '''
@@ -22,7 +22,7 @@ def test_hyp_test_missing(hyp_test):
         hyp_test(data, mean_0=1, alpha = 0.05)
         assert data == np.isnan(data)
 
-def test_hyp_test_non_zero(hyp_test):
+def test_hyp_test_non_zero():
     '''
     Test that the length of the data is greater than 0.
     '''
