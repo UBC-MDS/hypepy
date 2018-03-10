@@ -42,6 +42,16 @@ This project is part of the DSCI 524 Collaborative Software Development Course f
   * Returns:
     * `t`: the t-statistic as a number
 
+# Installation and Execution
+
+To install the package, please run the following command in your console:
+
+`pip install git+https://github.com/UBC-MDS/hypepy.git`
+
+To run all of the tests run the following command in your console:
+
+`python -m pytest`
+
 # Current Environment
 
 There are multiple packages in both Python and R that have similar functions and features as this package. For example, [Scipy](https://docs.scipy.org/doc/scipy/reference/stats.html) has an entire module that is capable of performing advanced hypothesis testing. Likewise, base R has several similar functions, and there is a wide variety of unique hypothesis testing packages available - such a [hypothesestest](https://cran.r-project.org/web/packages/hypothesestest/hypothesestest.pdf).
