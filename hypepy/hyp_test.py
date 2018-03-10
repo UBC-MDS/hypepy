@@ -54,7 +54,7 @@ def hyp_test(data, mean_0, alpha):
         print("The p-value is below the alpha threshold, you may reject the null hypothesis.")
 
     else:
-        print("The p-value is above the alpha threshold, you may accept the null hypothesis."))
+        print("The p-value is above the alpha threshold, you may accept the null hypothesis.")
 
 
 # Source : https://towardsdatascience.com/inferential-statistics-series-t-test-using-numpy-2718f8f9bf2f
