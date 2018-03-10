@@ -31,6 +31,7 @@ This project is part of the DSCI 524 Collaborative Software Development Course f
   * Arguments:
     * `data`: a 1-dimensional numpy array. Non-numerical values result in an error.
     * `mean_0`: the mean (as a number) of the population under the null hypothesis. Default: 0.
+    * `alpha`: Threshold for type I errors. Float is between 0 and 1.
   * Returns:
     * `results`: a summary text
 
