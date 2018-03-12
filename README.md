@@ -1,5 +1,7 @@
 # hypepy
 
+Status: [![Build Status](https://travis-ci.org/UBC-MDS/hypepy.svg?branch=master)](https://travis-ci.org/UBC-MDS/hypepy)
+
 # Authors
 
 Joe Sastrillo
@@ -15,6 +17,7 @@ The goal of this project is to create a user-friendly and intuitive **hypothesis
 Hypothesis testing belongs in the *statistical inference* domain, where an individual is attempting to determine if their results are significant or not. To accomplish this, the individual must generate a **null** and **alternative** hypotheses, and perform a series of statistical tests. That individual can use our package to make their life easier when looking for the elusive "significant" result.
 
 This project is part of the DSCI 524 Collaborative Software Development Course for the Masters of Data Science program at the University of British Columbia.
+
 
 # Function Examples
 
