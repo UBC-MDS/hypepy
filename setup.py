@@ -6,6 +6,8 @@ setup(name='hypepy',
       url='https://github.com/UBC-MDS/hypepy',
       author='Ivan Despot, Siobhan McCarter, Joe Sastrillo',
       packages=['hypepy'],
+      install_requires=[
+          'numpy>=1.12',
+          'pandas>=0.20'
+      ],
       zip_safe=False)
-
-      
