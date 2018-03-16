@@ -16,10 +16,12 @@ The goal of this project is to create a user-friendly and intuitive **hypothesis
 
 Hypothesis testing belongs in the *statistical inference* domain, where an individual is attempting to determine if their results are significant or not. To accomplish this, the individual must generate a **null** and **alternative** hypotheses, and perform a series of statistical tests. That individual can use our package to make their life easier when looking for the elusive "significant" result.
 
+Why is this useful? We aimed to create a package in which you could easily take in a data set and determine whether to accept or reject the null. The package does not require two inputs of data sets. Instead, you can compare your data set to a mean that you choose.  
+
 This project is part of the DSCI 524 Collaborative Software Development Course for the Masters of Data Science program at the University of British Columbia.
 
 
-# Function Examples
+# Functions
 
 * `conf_int`
 
@@ -59,3 +61,41 @@ To run all of the tests run the following command in your console:
 # Current Environment
 
 There are multiple packages in both Python and R that have similar functions and features as this package. For example, [Scipy](https://docs.scipy.org/doc/scipy/reference/stats.html) has an entire module that is capable of performing advanced hypothesis testing. Likewise, base R has several similar functions, and there is a wide variety of unique hypothesis testing packages available - such a [hypothesestest](https://cran.r-project.org/web/packages/hypothesestest/hypothesestest.pdf).
+
+# Example of Use
+
+First, we need to import the packages necessary:
+
+```
+import hypepy as hp
+import numpy as np
+```
+
+Suppose we are given the heights (in inches) of the following students in a class.
+
+```
+heights = np.array([72.6, 57.2, 67.6, 64.8, 59.3, 72.0, 67.2, 61.3, 64.7, 59.6])
+```
+
+We are told that the average height of a student in the class is equal to 70 inches, the average height of all students in a school. We test the null hypothesis that the average height of the class is 70 by performing a t-test.
+
+First, we can obtain the t-statistic for the situation where the heights are given and the mean is assumed to be 70.
+
+```
+t = hp.t_test(data = heights, mean_0 = 70)
+print(t)
+```
+
+To interpret the t-statistic, we obtain the p-value, the probability of obtaining the above statistic given that (assuming that) the null hypothesis is true^[Devore, J. (n.d.). Probability and statistics for engineering and the sciences.]. If the probability is low (below the usual significance level of 5%), this means it is unlikely that the data was obtained under our null hypothesis, so we reject it. To compute the p-value and make the comparison, use
+
+```
+hp.hyp_test(data = heights, mean_0 = 70, alpha = 0.05)
+```
+
+Finally, we obtain a 95% confidence interval.
+
+```
+hp.conf_int(data = heights)
+```
+
+We see that this confidence interval does not contain the null hypothesis mean of 70. Under the null hypothesis, this would happen about 5% of the time.
