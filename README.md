@@ -23,7 +23,7 @@ This project is part of the DSCI 524 Collaborative Software Development Course f
 
 * `conf_int`
 
-  * Computes the confidence interval of the mean from a population.
+  * Computes the confidence interval of the mean from a sample.
   * Arguments:
     * `data`: a 1-dimensional numpy array of a list of numbers. Non-numerical values result in an error.
   * Returns:
